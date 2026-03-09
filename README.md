@@ -263,7 +263,7 @@ Submit the following to **Brightspace**:
 
 - Combine all findings, screenshots, and written answers into a single PDF
 - Name your file: `LastName_FirstName_SA_Handson_Testing.pdf`
-- Include your repository link in the PDF (or as instructed by your instructor)
+- Include your repository link in the PDF
 
 ---
 
