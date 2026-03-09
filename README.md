@@ -286,7 +286,3 @@ This exercise was developed with the assistance of [Claude](https://claude.ai) (
 ## License
 
 MIT License — See [LICENSE](LICENSE) file for details.
-
-```
-
-```
