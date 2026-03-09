@@ -278,6 +278,14 @@ Submit the following to **Brightspace**:
 
 ---
 
+## Acknowledgement
+
+This exercise was developed with the assistance of [Claude](https://claude.ai) (an AI assistant by Anthropic) and [Cursor](https://cursor.com/), an AI-powered code editor. Claude and Cursor were used to:
+
+- Brainstorm ideas for the exercise structure and tasks
+- Draft and refine this README documentation
+
+
 ## License
 
 MIT License — See [LICENSE](LICENSE) file for details.
