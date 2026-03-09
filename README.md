@@ -201,8 +201,6 @@ The repository has a branch called `weak-oracle` with a test suite that achieves
 
 Check out the `weak-oracle` branch and run mutation testing.
 
-```
-
 Record in your report:
 
 1. The **mutation score** on the `weak-oracle` branch
@@ -213,13 +211,13 @@ Record in your report:
 
 Create a comparison table or summary:
 
-| Metric | Your `full-coverage` branch | `weak-oracle` branch |
-|--------|-----------------------------|----------------------|
-| Line coverage | | |
-| Branch coverage | | |
-| Mutation score | | |
-| Mutants killed | | |
-| Mutants survived | | |
+| Metric           | Your `full-coverage` branch | `weak-oracle` branch |
+| ---------------- | --------------------------- | -------------------- |
+| Line coverage    |                             |                      |
+| Branch coverage  |                             |                      |
+| Mutation score   |                             |                      |
+| Mutants killed   |                             |                      |
+| Mutants survived |                             |                      |
 
 Answer the following in your report:
 
@@ -285,8 +283,10 @@ This exercise was developed with the assistance of [Claude](https://claude.ai) (
 - Brainstorm ideas for the exercise structure and tasks
 - Draft and refine this README documentation
 
-
 ## License
 
 MIT License — See [LICENSE](LICENSE) file for details.
+
+```
+
 ```
