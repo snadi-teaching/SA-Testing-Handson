@@ -37,6 +37,7 @@ A test suite's quality cannot be measured by coverage alone. A test that execute
 2. Run mutation testing tools and identify surviving mutants
 3. Explain the gap between coverage percentage and mutation score
 4. Write new tests to increase coverage and improve the mutation score
+5. Compare two suites with the same coverage but different assertion quality (and thus different mutation scores)
 
 ---
 
@@ -116,7 +117,7 @@ mvn test
 
 ## Exercise Instructions
 
-**Total Time: 75 minutes**
+**Total Time: 95 minutes**
 
 ---
 
@@ -190,32 +191,81 @@ Record in your report:
 
 ---
 
+## Part 3: Compare Test Suite Effectiveness (20 minutes)
+
+**Goal:** Switch to the `weak-oracle` branch, measure its mutation score, and compare the effectiveness of two suites that both achieve ~100% coverage.
+
+### Task 3.1: Run Mutation Testing on the `weak-oracle` Branch (10 minutes)
+
+The repository has a branch called `weak-oracle` with a test suite that achieves ~100% line and branch coverage of `BankAccount`, but uses weak or missing assertions (e.g., `assertTrue(true)`, broad inequalities, or no assertions at all).
+
+Check out the `weak-oracle` branch and run mutation testing.
+
+```
+
+Record in your report:
+
+1. The **mutation score** on the `weak-oracle` branch
+2. How many mutants **generated**, **killed**, and **survived**?
+3. Include a **screenshot** of the PIT report for the `weak-oracle` branch
+
+### Task 3.2: Compare the Two Suites (10 minutes)
+
+Create a comparison table or summary:
+
+| Metric | Your `full-coverage` branch | `weak-oracle` branch |
+|--------|-----------------------------|----------------------|
+| Line coverage | | |
+| Branch coverage | | |
+| Mutation score | | |
+| Mutants killed | | |
+| Mutants survived | | |
+
+Answer the following in your report:
+
+1. Both suites achieve ~100% coverage. Why do they have different mutation scores?
+2. What does this comparison tell you about the relationship between coverage and test effectiveness?
+3. In your own words: why is mutation score a better indicator of test quality than coverage alone?
+
+---
+
 ## Submission Instructions
 
 Submit the following to **Brightspace**:
 
 ### Required Submissions
 
-**Total Points: 10 points**
+**Total Points: 40 points**
 
-1. **Part 1 — Test Coverage and Mutation Analysis (3 points)**
+1. **Part 1 — Test Coverage and Mutation Analysis (10 points)**
    - Overall line and branch coverage percentages for `BankAccount`
    - Identified low-coverage and high-coverage methods with explanations
    - Mutation score, mutant counts, and one surviving mutant analysis
    - Screenshots of coverage and mutation reports
 
-2. **Part 2 — Increase Coverage (7 points)**
+2. **Part 2 — Increase Coverage (10 points)**
    - Evidence of the `full-coverage` branch and new tests
    - New line/branch coverage and mutation score with screenshots
    - Explanation of how your tests affected coverage and mutation score
 
-3. **GenAI Disclosure (if applicable)**
+3. **Part 3 — Compare Test Suite Effectiveness (10 points)**
+   - Mutation score and metrics for the `weak-oracle` branch with screenshot
+   - Comparison table (full-coverage vs. weak-oracle)
+   - Answers to the reflection questions on coverage vs. mutation score
+
+4. **GenAI Disclosure (if applicable)**
    - Brief note describing any AI tools used and how they assisted you
+
+5. **Repository Link (10 points)**
+   - Submit a link to your final GitHub repository
+   - The repo must include the `full-coverage` branch with your updated test suite
+   - Store the coverage and mutation reports: commit `target/site/jacoco/` and `target/pit-reports/` (or the relevant output directories) so the different reports from your runs are preserved in the repo
 
 ### Submission Format
 
 - Combine all findings, screenshots, and written answers into a single PDF
 - Name your file: `LastName_FirstName_SA_Handson_Testing.pdf`
+- Include your repository link in the PDF (or as instructed by your instructor)
 
 ---
 
@@ -231,3 +281,4 @@ Submit the following to **Brightspace**:
 ## License
 
 MIT License — See [LICENSE](LICENSE) file for details.
+```
