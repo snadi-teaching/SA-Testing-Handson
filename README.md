@@ -134,7 +134,7 @@ Research how to configure JaCoCo for a Maven project and set it up for this repo
 
 Use the [JaCoCo documentation](https://www.jacoco.org/jacoco/trunk/doc/) and other resources to complete the setup.
 
-### Task 1.2: Interpret the Coverage Report and Identify a Surviving Mutant (20 minutes)
+### Task 1.2: Interpret the Coverage Report  (5 min) 
 
 **Coverage:** Record the following in your report:
 
@@ -144,18 +144,21 @@ Use the [JaCoCo documentation](https://www.jacoco.org/jacoco/trunk/doc/) and oth
 4. Which methods have **high coverage** (above 90%)? Does high coverage guarantee the tests are effective? Explain your reasoning.
 5. Include a **screenshot** of your coverage report showing the overall percentages and the `BankAccount` class.
 
+
+### Task 1.3 Run Mutation Testing and Identify a Surviving Mutant (15 minutes)
+
 **Mutation testing:** Set up PIT and run mutation testing. Research how to configure PIT for a Maven project. Your setup should target `com.softwareanalytics.bank.*`, generate an HTML report, and work with JUnit 5. Use the [PIT documentation](https://pitest.org/) and [PIT Maven Plugin Quickstart](https://pitest.org/quickstart/maven/).
 
 Record in your report:
 
-6. What is the **mutation score** (percentage of mutants killed)? How many mutants **generated** and **survived**?
-7. Include a **screenshot** of your mutation testing report.
+1. What is the **mutation score** (percentage of mutants killed)? How many mutants **generated** and **survived**?
+2. Include a **screenshot** of your mutation testing report.
 
 **Identify one surviving mutant:** Using the PIT report, find **one surviving mutant** and document:
 
-8. The **mutant diff** — file, line, original vs. mutated code
-9. A plain-English explanation of why no existing test caught this mutant — what scenario or input would expose the fault?
-10. Was the mutated line covered by the tests (check JaCoCo)? If so, what does this tell you about coverage vs. mutation testing?
+3. The **mutant information** — file, line, original vs. mutated code
+4. A plain-English explanation of why no existing test caught this mutant — what scenario or input would expose the fault?
+5. Was the mutated line covered by the tests (check JaCoCo)? If so, what does this tell you about coverage vs. mutation testing?
 
 ---
 
@@ -223,7 +226,7 @@ Answer the following in your report:
 
 1. Both suites achieve ~100% coverage. Why do they have different mutation scores?
 2. What does this comparison tell you about the relationship between coverage and test effectiveness?
-3. In your own words: why is mutation score a better indicator of test quality than coverage alone?
+3. In your own words: is mutation score a better indicator of test quality than coverage alone? Do you think common mutation techniques (e.g., switching operators etc) are effective at simulating real faults to determine test effectiveness?
 
 ---
 
