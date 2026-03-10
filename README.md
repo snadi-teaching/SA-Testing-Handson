@@ -101,6 +101,7 @@ A simple bank account class with:
 1. Click **"Use this template"** (green button at the top of the repo)
 2. Select **"Create a new repository"**
 3. Name it appropriately (e.g., `SAhandons-testing-yourname`)
+4. **Include all branches:** When creating the repo, check **"Include all branches"** so the `reference-suite` branch (needed for Part 3) is copied to your new repository.
 
 **Clone your new repository and confirm the test suite runs:**
 
@@ -111,7 +112,7 @@ cd bank-demo
 mvn test
 ```
 
-> **Note:** Do NOT fork or clone the template directly. Use the "Use this template" button to create your own copy.
+> **Note:** Do NOT fork or clone the template directly. Use the "Use this template" button to create your own copy. When creating your repo from the template, be sure to select **"Include all branches"** so you have access to all branches (including `reference-suite`) after you clone.
 
 ---
 
@@ -134,7 +135,7 @@ Research how to configure JaCoCo for a Maven project and set it up for this repo
 
 Use the [JaCoCo documentation](https://www.jacoco.org/jacoco/trunk/doc/) and other resources to complete the setup.
 
-### Task 1.2: Interpret the Coverage Report  (5 min) 
+### Task 1.2: Interpret the Coverage Report (5 min)
 
 **Coverage:** Record the following in your report:
 
@@ -143,7 +144,6 @@ Use the [JaCoCo documentation](https://www.jacoco.org/jacoco/trunk/doc/) and oth
 3. Which methods in `BankAccount` have **low coverage** (below 60%)? Why do you think they are undertested?
 4. Which methods have **high coverage** (above 90%)? Does high coverage guarantee the tests are effective? Explain your reasoning.
 5. Include a **screenshot** of your coverage report showing the overall percentages and the `BankAccount` class.
-
 
 ### Task 1.3 Run Mutation Testing and Identify a Surviving Mutant (15 minutes)
 
@@ -196,31 +196,31 @@ Record in your report:
 
 ## Part 3: Compare Test Suite Effectiveness (20 minutes)
 
-**Goal:** Switch to the `weak-oracle` branch, measure its mutation score, and compare the effectiveness of two suites that both achieve ~100% coverage.
+**Goal:** Switch to the `reference-suite` branch, measure its mutation score, and compare the effectiveness of two suites that both achieve ~100% coverage.
 
-### Task 3.1: Run Mutation Testing on the `weak-oracle` Branch (10 minutes)
+### Task 3.1: Run Mutation Testing on the `reference-suite` Branch (10 minutes)
 
-The repository has a branch called `weak-oracle` with a test suite that achieves ~100% line and branch coverage of `BankAccount`, but uses weak or missing assertions (e.g., `assertTrue(true)`, broad inequalities, or no assertions at all).
+The repository has a branch called `reference-suite` with an alternative test suite that also achieves ~100% line and branch coverage of `BankAccount`. You will compare its results with your `full-coverage` branch.
 
-Check out the `weak-oracle` branch and run mutation testing.
+Check out the `reference-suite` branch and run mutation testing.
 
 Record in your report:
 
-1. The **mutation score** on the `weak-oracle` branch
+1. The **mutation score** on the `reference-suite` branch
 2. How many mutants **generated**, **killed**, and **survived**?
-3. Include a **screenshot** of the PIT report for the `weak-oracle` branch
+3. Include a **screenshot** of the PIT report for the `reference-suite` branch
 
 ### Task 3.2: Compare the Two Suites (10 minutes)
 
 Create a comparison table or summary:
 
-| Metric           | Your `full-coverage` branch | `weak-oracle` branch |
-| ---------------- | --------------------------- | -------------------- |
-| Line coverage    |                             |                      |
-| Branch coverage  |                             |                      |
-| Mutation score   |                             |                      |
-| Mutants killed   |                             |                      |
-| Mutants survived |                             |                      |
+| Metric           | Your `full-coverage` branch | `reference-suite` branch |
+| ---------------- | --------------------------- | ------------------------ |
+| Line coverage    |                             |                          |
+| Branch coverage  |                             |                          |
+| Mutation score   |                             |                          |
+| Mutants killed   |                             |                          |
+| Mutants survived |                             |                          |
 
 Answer the following in your report:
 
@@ -250,8 +250,8 @@ Submit the following to **Brightspace**:
    - Explanation of how your tests affected coverage and mutation score
 
 3. **Part 3 — Compare Test Suite Effectiveness (10 points)**
-   - Mutation score and metrics for the `weak-oracle` branch with screenshot
-   - Comparison table (full-coverage vs. weak-oracle)
+   - Mutation score and metrics for the `reference-suite` branch with screenshot
+   - Comparison table (full-coverage vs. reference-suite)
    - Answers to the reflection questions on coverage vs. mutation score
 
 4. **GenAI Disclosure (if applicable)**
